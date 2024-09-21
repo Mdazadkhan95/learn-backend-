@@ -1,0 +1,39 @@
+<%- include("includes/head.ejs") %>
+<body>
+    <h1>condional Statements</h1>
+    <h1>roll dice is started <%= rolldice %> </h1>
+    <%  if(rolldice == 6) { %>
+       <h2>Nice dice again.</h2>
+    <% } %> 
+
+
+
+
+
+
+
+   <!--   -->
+    <!-- <button id="roll">rolldice </button>
+    <p id="result"></p> -->
+
+    <!-- <script>
+          let roll = document.querySelector("#roll");
+    roll.addEventListener('click', () => {
+        let rolldice = Math.floor(Math.random()*6)+1;
+        let result = document.querySelector("#result");
+        if(rolldice == 6){
+            result.innerHTML = `congragulation ${rolldice}` ;
+        }
+        else{
+            result.innerHTML = `refresh the page ${rolldice}` ;
+            roll.style.display= "none";
+        }
+
+        
+        
+    })
+    </script> -->
+
+    <%- include("includes/footer.ejs") %>
+</body>
+</html>

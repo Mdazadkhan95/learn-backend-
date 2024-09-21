@@ -1,0 +1,84 @@
+EJS:->  (embedded javaScript templates).
+EJS is a simple templating language that lets you generate html markup with plain javaScript.
+
+
+ agar aap chahte hai ke ek pura templates ko client side dekhana to sabse pahle khud ka ek package.json file  banaie or usme express or ejs package ko install kijiye  uske baad index.js naam ka file bnaie or usme express ko require kijiye uske ejs ko require nhi krna padta hai kyunki express mein ejs includes hota hai  uske baad niche ka statement index.js file mein likhna hota hai.
+ 1.  app.set("view "engine", "ejs")
+ejs mein data ko send nahi render krte hai 
+yahan render krne ka matlab hota hai file ko bhejna.
+uske liye ham res.send ka use nahi krte hai uske liye res.render ka use krte hai agar aapko pura ka pura ek file ko bhejna to uske liye aap res.render ka use kijiye.
+uske baad hame ek views naam ka folder banana hoga kyunki view engine jo render krega file ko wo sabse phle views naam ka folder hi dhoondhta hai or jis bhi templates ko render krnwana hai usko views naam ke directory ke andar hi rkhna hai.
+
+if you send the file as a client side so use render in ejs ..
+
+here firstly set the view engine for using ejs 
+
+here i am not send the data, i am render the data and file using ejs render
+ex:->  app.get("/", (req, res) => {
+    res.render("home.ejs")
+})
+
+** views directory **
+
+here firstly create the ejs file in the views directory because ejs find the by default views directories in ejs directories then execute the file 
+if you want to define the folder where your ejs file so easily declared so follow this command agar aap chahte hai ki require kiiye huye ejs file ko uske prent directories se server ko start krna to is line ko use krke app server start kr skte hai
+
+nodemon directoryName/file.js
+
+but yahan is js file mein agr ejs file ko render kiya hai to phir error marega kyunki aap jis directory mein rh kr run krenge views folder ko wahin khoja jayega isliye error marega aagr chahte hai ke error nhi mare to aapko ye line likhna hoga
+
+
+    const path = require("path")
+    app.set("views", path.join(__dirname, "/views"));
+
+    isse ham ye batana chahte hai views ko wahan mt search mt kro jahan se file run ho rha hai views ko jkr jahan file hai wahan find kro. isko set krne ke baad ham apna sahi path bta rhe hote hai.
+
+    then your file is defined in the ejs file 
+
+    here i define the path of views directory using (__dirname here define the path then folder name "")
+
+    path.join:->  path.join is work as a join two folder.
+
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    
+
+    if you want start the server in the parent directory so it's possible 
+
+        like :->  nodemon then folder name/file name then extension like .js, .java etc
+        syntax:-> nodemon templates(EJS)/index.js
+
+
+
+
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Interpolation syntax
+
+    Interpolation refers to embedding epression into marked up text.
+
+    if you want to use the value of .js file to .ejs file so use the render so pass the variable like object
+        ex:-> res.render("filename.extension(yahan aap bina extension naam likhe huye bhi apne file ko declared kr skte hai)" yahan ek object pass krna hoga jisme pehla object hoga and second one is value of object yahan aap single value se bhi kaam chl skta hai uske liye appko same variable name declared krna prega jo nam apke variable ka hai )
+        syntax:-> res.render("rolldice", {num: rolldice})
+            or
+        syntax:-> res.render("rolldice", {rolldice})
+
+
+        
+*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+serving static files 
+
+if you want to send the multiple file in srver side to client side so you can perform this operation using this command of line 
+
+ex:-> app.use(express.static(folder_name))
+
+syntax:->  app.use(express.static(path.join(__dirname. "public")));
+
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+
+includes 
+

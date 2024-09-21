@@ -1,0 +1,37 @@
+<%- include("includes/head.ejs") %>
+<body>
+
+    <p><%= data.image %></p>
+    <h1>This page is belongs to @<%= data.name%></h1>
+    <button id="btn">follow</button>
+    <button>followers</button>
+
+    <p>followers : <%= data.followers %>  &nbsp; &nbsp; &nbsp; &nbsp;
+    follow : <%= data.following %></p> 
+    <hr>
+
+
+
+    <% for(let post of data.posts) { %>
+        <img src="<%= post.image %>" alt="some image">
+        <p>
+            likes : <%= post.likes %> 
+             &nbsp; &nbsp; &nbsp; &nbsp;
+            comments : <%= post.comments %></p> 
+    <% } %>
+
+
+
+    <!-- <h1>loop is started</h1> -->
+    <%- include("includes/footer.ejs") %>
+
+    <script src="/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+    

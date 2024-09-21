@@ -1,0 +1,66 @@
+if you want to export some variable in one file to another that follow tese steps:
+here no need to install any pacages.
+1.  make a file which file contain a data.
+2.  use module.export = // here a variable name  => this line is is write under the containing data file.
+3. then go to  the which file there need a data to require a data.
+4. use require method to require data 
+4. let variable name = require("./file.js")// (./ dot slash means abhi jis directory mein hai usi ka data ye require krega ).
+
+
+*********************************************************************************
+
+if you want to export multiple variable so use this line of statement 
+
+here also no any need of install any packages.
+
+1.  create multiple variable 
+2.  use this line of command
+
+let apple  = "red";
+let  price = 39;
+let size = "s";
+
+if you need to export these data to another file to use this line of command.
+
+let obj = {
+    apple : apple,
+    price : price,
+    size  : size
+}
+module.exports = obj;
+
+go to the main file jahan is data ko require krna hai.
+
+wahan ja kr require kijiye is file ko like that 
+1. let AppleData = require("./appleFile");
+then print this data using different method .
+console.log(AppleData);
+then complete the exports in multiple variable.
+
+
+
+*****************************************-************************************-**
+
+if you need to access particular varable and data so you can access now for follow tgis step 
+1.  console.log(appleData.price);
+
+
+*************************************-*******************************************
+
+
+if you need to access the data one directory to another directory  so follow this line of command.
+
+1. make a directory
+2. make a file 
+3. make a index.js   file this file most important because agar aap chahte hai ke ek directory se dusre directory mein data ko exports krna to sabse pahle index.js file hi find kiya jayega kyunki ye file us directory ka sara file ko require krega or yahi aage export krega .
+4.  require all file in index.js
+then create a variable like 
+5.  let apple = require("./apple");
+    let banana = require("./banana");
+    let mango = require("./mango");
+6. let fruits = [apple, banana, orange];
+7.  module.exports = fruits;
+8. iske baad wahan jaie jahan is file ko require krna 
+then
+9. let info = require("./fruits");  fruits is directory name;
+

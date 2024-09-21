@@ -1,0 +1,103 @@
+npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
+
+
+package =>  package ye kisi or ka likha hua aaisa code hota hai jisko ham use kr skte hai jaise kisi developers ne kuch develop kiya to hme bus uska package install krna jaise express figlet etc.
+
+
+--------------------------------------------------------------------------
+
+npm consists of three distinct components:
+
+1.  the website
+2.  the Command Line Interface (CLI)
+3.  the registry
+
+-------------------------------------------------------------------------
+if you want to explore more documentation of npm so you go now this website. (https://docs.npmjs.com/about-npm).
+
+-------------------------------------------------------------------------
+
+Installation Package 
+
+Node_Module:-> The Node_modules folder contains every installed dependency for you project.
+
+
+Package-lock.json:->  It records the exact version of every installed dependency, including its sub-dpendecies and their versions.
+
+
+Package.json:-> it is one of the  most important file related our project.  The package.json file contains description and functional metadata about a project, such as a name, version, and dependencies.
+
+
+-------------------------------------------------------------------------
+
+if you delete the node module in you directory so don't worry 
+agar package.json file hai to node module ko asani se laya ja skta hai agr aapko kisi ko bhi apna project bhejna hai to aapko node module ko bhejne ki jaroorat nhi hai aap sirf package.json file ko share kr dijiye use baad wo ye command use krega uske baad node module naam ka package apne aap hi install ho jayega because package.json file store the all information about the project that's are the reason ke node module install krne ki jaroorat nhi hai agar apke pass package.json file hai to.
+
+install process is 
+ 
+ npm install 
+
+  here no any name of package because package.json file mein sab hai wo khud hi install kr lega 
+
+
+-------------------------------------------------------------------------
+
+
+if you want to make your own package so follow this command.
+
+1. npm init  // nm init ki madad se ham apne package.json file ko initilize kr skte hai.
+
+2.  package name: (our_packag): "here your Package name" 
+
+3. version: (1.0.0)    // declare the version of you package if you want to default version so press enter on keyboard.
+
+4.   description:    // here description of you project 
+
+5.    entry point: (index.js) 
+
+
+
+6.   test command: 
+
+
+
+7.   git reprository:
+
+
+
+8.   keywords:
+
+
+9.   author : "whose person make package that person name is author name"
+
+10.   license:  
+
+
+11.   is this ok? (yes )  the write yes 
+
+
+uske baad finally apka package.json file create ho jayega 
+
+
+
+------------------------------------------------------
+
+if you want to install the package of globa directories so it's possible so use that line of command 
+
+0.   sudo chown -R $USER/usr/local/lib/node_modules
+
+1.   npm install -g <-Package Name->
+
+2.   npm link <- Package name ->
+
+
+
+/////////////////////////////////////////////////////////
+
+if you want to create a package default state so you use this comand 
+
+npm init -y
+
+
+//////////////////////////////////////////////////////////////
+

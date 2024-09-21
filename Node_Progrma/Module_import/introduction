@@ -1,0 +1,13 @@
+// require vs import
+
+// example import {sum} from "./math.js"
+
+
+// we can't selective load only the pices we need with require but with import, we can selective load only the piece we need which can save memory.
+
+
+//  loading is synchronous for require but can be asynchronous for "import".
+
+// if you want to use a import method so firstly make a package .json file and write there 
+
+// "type": "module"

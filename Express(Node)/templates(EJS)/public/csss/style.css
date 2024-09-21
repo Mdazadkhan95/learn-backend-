@@ -1,0 +1,10 @@
+body{
+    background: linear-gradient(to left,  pink,  aqua);
+    /* background-color: pink; */
+}
+
+img{
+    height: auto;
+    width: 20%;
+    text-align: center;
+}

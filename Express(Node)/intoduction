@@ -1,0 +1,88 @@
+express 
+
+A node js web application framework that helps us to make web application.
+It is use for server side programming.
+
+
+work of express.
+
+1. listen for imcoming requst.
+2. parse :-> if you don't know about the incoming data from the server side then express is parse the data like javaScript.
+
+3.  Match response with routes (Ex.   www.googl.com/search (here search is a routes )).
+
+4.  after then response is received to the client side.
+
+
+
+** getting started with express **
+
+listen method ....
+
+express is listen to incoming request using listen method it considered two arguments first one is port and second one is callback function that represent a serverside Scripting.
+
+
+port ........
+
+port are a logical end point of a network connection that is used to exhange information between a web server to web client .
+
+default and custom port like -- 3000 or 8080.
+
+if you  want to see the example so go now the index.js file.
+
+------------------------------------------------
+if you use the listen method then your serer is started but it can't send the response if you want to send the response then use that method iin below.
+
+
+use() or res.send():->  
+
+use()->  it firstly isten the different request then it contain a two parameter then it excute a callback .
+
+ex.   app.use ((req, res) => {
+    console.log("request received")// this line of statement show the client request your port but this line never seen the client but see that.
+
+    res.send("here you write the message that visible for client side like html file or etc send that client side.")
+
+})
+
+routing in express ..............................
+
+it is a process of selecting a path for traffic in a network or across multiple networks.
+
+
+here a condition, if you want to send two response in a single path it's does
+nt possible. one to one request only send in one path.
+
+here is (/) slash is default path routes 
+
+if you want to create different route path to show different work so use that comand.
+
+
+app.get("/", (req, res) => {
+    res.send("it is a root path")
+})
+
+app.get("home", (res, req) => {
+    res.send("it is a home path")
+})
+
+here many path to create your own requirement.
+
+
+
+nodemon..........................................................................
+
+
+to automatically restart server with code changes.
+
+if you want to start the server automaticlly  so follow these step 
+
+1. install the nodemon server globaly  (npm install -g nodemon)
+
+2. excute the file (nodemon index.js)
+
+
+*****path parameter **** 
+
+req.params
+
