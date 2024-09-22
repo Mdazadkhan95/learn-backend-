@@ -1,0 +1,34 @@
+************Miscellaneous**************
+
+
+1. Get & Post request 
+
+=> Get request =>jab hame kuch request chahiye hota hai tab ham get request ko use krte hai.
+get request ke andar agar kuch adition data bhejna hota hai to use ham query string mein bhejte hai.
+limit of url jase mein ek limit tak hi url data ho skta hai 
+isme query string ke madad se data bheja jata hai.
+
+query string mein jo bhi data bhejte hai wo url mein show hota hai
+ex: => jab hame kuch bhi search krte hai google pr to wo hamara get request hota hai.
+
+=> Post request => jab data base ke andar  koi nai file create or update krna hota hai tab ham post request ko use krte hai.
+
+isme url ke andar data show nhi hota hai isme kisi bhi type ka data bhej skte hai.
+
+post request mein jo data ata hai wo query string mein nahi balki request body ke through jata hai 
+
+ex: => agar hme google drive pr file ya folder upload krna hai to uske liye ham post request ko use krte hai 
+
+=> two way to handle post request:-
+
+1. set up post request route  to get some respons.
+2. parse post request.
+iska sara data request body ke andar hota hai isko dekhne ke liye hame console.log mein req.body krte hai to data milega hamare terminal pr but uske liye iske middle ware ko likhna hoga kynki client side se kya data aa rha hai express nahi padh pata hai iske liye hame express readable banana parta hai is do line ke madad se.
+
+app.use(express.urlencoded({ extended: true }));
+
+is line ka matlab hota hai client side se jo data aa rha hai or urlencoded format mein aa rhe data ko express readable format mein convert krta hai.
+
+
+app.use(express.json());
+or json data ko express readable banata hai 

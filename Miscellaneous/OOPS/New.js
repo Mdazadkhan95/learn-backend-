@@ -30,3 +30,7 @@ else{
     console.log("false");
     
 }
+
+//  yahan ye if condition true hai kyunki ye constructor prototype ka function jo dono mein hai isliye ye condition true hai. yahan aaisa nhi hai ke p1 ne alag copy banai hai or p2 ne alag copy banai hai dono ek hi instance ko use kr rhi hai. 
+
+// ye factory function se better tarika hai kyunki uska alag function ke liye alag memory use hota hai pr yaha prototype mein hi hai 
